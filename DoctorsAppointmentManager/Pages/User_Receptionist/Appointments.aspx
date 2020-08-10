@@ -6,7 +6,7 @@
 	<link href="<%=ResolveClientUrl("~/_Styles/Appointments_CSS.css")%>" rel="Stylesheet" />
 	<link href="<%=ResolveClientUrl("~/_Styles/ComboBox_CSS.css")%>" rel="Stylesheet" />
 	<script src="<%=ResolveClientUrl("~/_Scripts/ComboBox_JS.js")%>" type="text/javascript"></script>
-	
+
 	<link href="<%=ResolveClientUrl("~/_Styles/jquery-ui.css")%>" rel="Stylesheet" />
 	<link href="<%=ResolveClientUrl("~/_Styles/jquery-ui.structure.css")%>" rel="Stylesheet" />
 	<link href="<%=ResolveClientUrl("~/_Styles/jquery-ui.theme.css")%>" rel="Stylesheet" />
@@ -543,7 +543,7 @@
 							</div>
 							<div class="row">
 								<div class="col PName">
-									<a id="A_PHistoryLink" tabindex="-1" pagelink="/Doctor/PatientHistory/" href="#" target="_blank">
+									<a id="A_PHistoryLink" tabindex="-1" pagelink="<%=ResolveClientUrl("~/Receptionist/PatientHistory/")%>" href="#" target="_blank">
 										<span id="L_PName">Patient Name</span>
 									</a>
 								</div>
