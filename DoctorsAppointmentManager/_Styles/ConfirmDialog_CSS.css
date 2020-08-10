@@ -1,0 +1,89 @@
+﻿* {
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	*:focus {
+		outline: none;
+	}
+
+.div_confirmDialog {
+	z-index: 4;
+	display: flex;
+	position: absolute;
+	/*background-color: #F0EDEC55;*/
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+}
+
+	.div_confirmDialog.hide {
+		animation-name: VisibilityOut;
+		animation-delay: 0s;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+	.div_confirmDialog.show {
+		animation-name: VisibilityIn;
+		animation-delay: 0s;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+.div_dialog {
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	background: #F7F7F7;
+	width: 350px;
+	padding: 40px 60px 40px 60px;
+	border: 1px solid #202020;
+	border-radius: 20px;
+}
+
+	.div_dialog .div_message {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	.div_dialog .div_message span {
+		font-size: 30px;
+	}
+
+	.div_dialog .div_buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.div_dialog .div_buttons button {
+		flex-grow: 0;
+	}

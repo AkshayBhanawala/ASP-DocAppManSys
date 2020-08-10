@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Pages/AfterLogin_MasterPage.Master" AutoEventWireup="true" CodeFile="Receptionist_MasterPage.Master.cs" Inherits="DoctorsAppointmentManager.Pages.User_Receptionist.Receptionist_MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<link href="<%=ResolveClientUrl("~/_Styles/ConfirmDialog_CSS.css")%>" rel="Stylesheet" />
+	<script src="<%=ResolveClientUrl("~/_Scripts/ConfirmDialog_JS.js")%>" type="text/javascript"></script>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<div id="div_body" class="div_body">
+		<div id="div_menucontainer" class="div_menucontainer">
+			<a tabindex="-1" href="~/Receptionist" id="a_menuitem_dashboard" class="div_menuitem" runat="server">
+				<asp:Image ID="I_menuitem_dashboard" runat="server" ImageUrl="~/_Images/Dashboard.png" />
+				<asp:Label ID="L_menuitem_dashboard" runat="server" Text="DashBoard"></asp:Label>
+			</a>
+			<a tabindex="-1" href="~/Receptionist/Appointments" id="a_menuitem_appointments" class="div_menuitem" runat="server">
+				<asp:Image ID="I_menuitem_appointments" runat="server" ImageUrl="~/_Images/Appointment.png" />
+				<asp:Label ID="L_menuitem_appointments" runat="server" Text="Appointments"></asp:Label>
+			</a>
+			<a tabindex="-1" href="~/Receptionist/PatientHistory" id="a_menuitem_patienthistory" class="div_menuitem" runat="server">
+				<asp:Image ID="I_menuitem_patienthistory" runat="server" ImageUrl="~/_Images/Patient_History.png" />
+				<asp:Label ID="L_menuitem_patienthistory" runat="server" Text="Patient History"></asp:Label>
+			</a>
+		</div>
+		<div id="div_contentpageholder" class="div_contentpageholder firstload" runat="server">
+			<%-- Overlay Confirm Dialog Box Start --%>
+			<div id="div_confirmDialog" class="div_confirmDialog">
+				<div class="div_dialog">
+					<div class="div_message"><span>Confirm?</span></div>
+					<div class="div_buttons">
+						<button id="BTN_ConfirmDialog_Yes" class="btn btn_green" title="Yes">Yes</button>
+						<button id="BTN_ConfirmDialog_No" class="btn btn_red" title="No">No</button>
+					</div>
+				</div>
+			</div>
+			<%-- Overlay Confirm Dialog Box End --%>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1_1" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+</asp:Content>
+
+

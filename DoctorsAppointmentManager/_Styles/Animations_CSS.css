@@ -1,0 +1,274 @@
+﻿@keyframes SplashScreen_FullScaledLeftToRight {
+	0% {
+		transform: translateX(-100%) scaleX(0);
+	}
+	50% {
+		transform: translateX(0%) scaleX(1);
+	}
+	100% {
+		transform: translateX(100%) scaleX(0);
+	}
+}
+@keyframes SplashScreen_FullLeftToRight {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+@keyframes FullScale {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+@keyframes SplashScreen_Circle {
+	0% {
+		z-index: 99;
+		opacity: 1;
+		border-width: calc(140%);
+		width: 0;
+		padding-top: 0;
+	}
+	99% {
+	}
+	100% {
+		z-index: -1;
+		opacity: 0;
+		border-width: 0;
+		width: 130vmax;
+		padding-top: 130vmax;
+	}
+}
+@keyframes SplashScreen_LineInExpand {
+	0% {
+		z-index: 99;
+		opacity: 1;
+		height: 0.1%;
+		top: 50%;
+		transform: translateX(-100%);
+	}
+	60% {
+		height: 0.1%;
+		top: 50%;
+		transform: translateX(0%);
+	}
+	99% {
+		z-index: 99;
+		opacity: 1;
+		top: 0;
+		height: 100%;
+	}
+	100% {
+		z-index: -1;
+		opacity: 0;
+	}
+}
+@keyframes SplashScreen_Home_Grow_HeightWidth {
+	0% {
+		opacity: 1;
+		width: 0;
+		height: 0;
+	}
+	100% {
+		opacity: 1;
+		width: 200%;
+		height: 200%;
+	}
+}
+@keyframes SplashScreen_TopSlideIn {
+	0% {
+		z-index: 99;
+		transform: translateY(-100%);
+	}
+	100% {
+		z-index: 99;
+		transform: translateY(0);
+	}
+}
+@keyframes FoledSlideBottom {
+	0% {
+		border-bottom-left-radius: 0% 0%;
+	}
+	40% {
+		transform: translateY(0);
+	}
+	60% {
+		border-bottom-left-radius: 100% 100%;
+	}
+	100% {
+		transform: translateY(-100%);
+		border-bottom-left-radius: 100% 100%;
+	}
+}
+@keyframes FoledSlideTop {
+	0% {
+		border-top-left-radius: 0% 0%;
+	}
+	40% {
+		transform: translateY(0);
+	}
+	60% {
+		border-top-left-radius: 100% 100%;
+	}
+	100% {
+		transform: translateY(100%);
+		border-top-left-radius: 100% 100%;
+	}
+}
+@keyframes VisibilityIn {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes VisibilityOut {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+@keyframes FadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes FadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes ZoomOut_Small {
+	0% {
+		opacity: 0;
+		transform: scale(2);
+	}
+	20% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes TopSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes BottomSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes LeftSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes RightSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes BlurIn {
+	0% {
+		filter: blur(0px);
+	}
+
+	100% {
+		filter: blur(20px);
+	}
+}
+@keyframes BlurOut {
+	0% {
+		filter: blur(20px);
+	}
+
+	100% {
+		filter: blur(0px);
+	}
+}
+
+@keyframes hueRotate {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+		filter: hue-rotate(0deg);
+	}
+	to {
+		-webkit-filter: hue-rotate(360deg);
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes View1_Load {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 1;
+		transform: var(--View1_Transform);
+	}
+}
+
+@keyframes View2_Load {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 1;
+		transform: var(--View2_Transform);
+	}
+}
+
+@keyframes View3_Load {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 1;
+		transform: var(--View3_Transform);
+	}
+}

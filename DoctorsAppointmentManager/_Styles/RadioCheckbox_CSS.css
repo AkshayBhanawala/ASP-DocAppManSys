@@ -1,0 +1,96 @@
+﻿:root {
+	--radio_width: 40px;
+	--radio_height: 40px;
+	--padding_size: 20px;
+}
+
+.radio,
+.checkbox {
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin-top: calc(var(--padding_size) / 2);
+	margin-bottom: calc(var(--padding_size) / 2);
+}
+
+	.radio input[type=radio],
+	.checkbox input[type=checkbox] {
+		position: absolute;
+		opacity: 0;
+	}
+
+		.radio input[type=radio] + label,
+		.checkbox input[type=checkbox] + label {
+			position: relative;
+			cursor: pointer;
+			font-size: calc(var(--padding_size) + 2px);
+			width: var(--radio_width);
+			padding-left: calc(var(--radio_width) + 5px);
+			padding-right: var(5px);
+			padding-top: 5px;
+			transition-timing-function: ease-in;
+			transition-duration: 0.3s;
+		}
+
+			.radio input[type=radio] + label::before,
+			.checkbox input[type=checkbox] + label::before {
+				box-sizing: border-box;
+				content: " ";
+				position: absolute;
+				left: 0px;
+				top: 0;
+				display: inline-block;
+				width: var(--radio_width);
+				height: var(--radio_width);
+				border: 2px solid #222222FF;
+				border-radius: 100px;
+				z-index: -1;
+				transition-timing-function: ease-in;
+				transition-duration: 0.3s;
+			}
+			.checkbox input[type=checkbox] + label::before {
+				border-radius: 10px;
+			}
+
+		.radio input[type=radio]:hover + label::before,
+		.radio input[type=radio]:focus + label::before,
+		.radio input[type=radio]:active + label::before,
+		.checkbox input[type=checkbox]:hover + label::before,
+		.checkbox input[type=checkbox]:focus + label::before,
+		.checkbox input[type=checkbox]:active + label::before {
+			border: 2px solid #2B92E4;
+			transition-timing-function: ease-out;
+			transition-duration: 0.3s;
+		}
+
+		.radio input[type=radio]:checked + label,
+		.checkbox input[type=checkbox]:checked + label {
+			width: 100%;
+			padding-left: var(--radio_width);
+			padding-right: var(--radio_width);
+			transition-timing-function: ease-out;
+			transition-duration: 0.3s;
+		}
+
+			.radio input[type=radio]:checked + label::before,
+			.checkbox input[type=checkbox]:checked + label::before {
+				width: 100%;
+				height: var(--radio_height);
+				border: 2px solid #2B92E4;
+				background-color: #2B92E4;
+				transition-timing-function: ease-out;
+				transition-duration: 0.3s;
+			}
+
+		.radio input[type=radio]:disabled + label,
+		.checkbox input[type=checkbox]:disabled + label {
+			cursor: not-allowed;
+			text-decoration: line-through;
+			color: #485550FF;
+		}
+
+			.radio input[type=radio]:disabled + label::before,
+			.checkbox input[type=checkbox]:disabled + label::before {
+				background-color: #485550FF;
+				border: 2px solid #485550FF;
+			}

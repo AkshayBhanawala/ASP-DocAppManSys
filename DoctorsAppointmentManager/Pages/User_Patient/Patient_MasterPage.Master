@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Pages/AfterLogin_MasterPage.Master" AutoEventWireup="true" CodeFile="Patient_MasterPage.Master.cs" Inherits="DoctorsAppointmentManager.Pages.User_Patient.Patient_MasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<div id="div_body" class="div_body">
+		<div id="div_menucontainer" class="div_menucontainer">
+			<a href="~/Patient" id="a1" class="div_menuitem" runat="server">
+				<asp:Image ID="Image1" runat="server" ImageUrl="~/_Images/Dashboard.png" />
+				<asp:Label ID="Label1" runat="server" Text="DashBoard"></asp:Label>
+			</a>
+		</div>
+		<div id="div_contentpageholder" class="div_contentpageholder firstload" runat="server">
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1_1" runat="server">
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+</asp:Content>

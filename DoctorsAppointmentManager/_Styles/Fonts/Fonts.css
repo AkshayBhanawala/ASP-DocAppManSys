@@ -1,0 +1,50 @@
+﻿@font-face {
+	font-family: "Roboto";
+	src: url("./Roboto/RobotoDelta_v2-VF.ttf");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Dosis";
+	src: url("./Dosis/Dosis-VariableFont_wght.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Nanum Gothic";
+	src: url("./Nanum_Gothic/NanumGothic-Regular.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Nanum Gothic";
+	src: url("./Nanum_Gothic/NanumGothic-Bold.ttf");
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Nanum Gothic";
+	src: url("./Nanum_Gothic/NanumGothic-ExtraBold.ttf");
+	font-weight: 900;
+}
+@font-face {
+	font-family: "Quicksand";
+	src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Ubuntu";
+	src: url("./Ubuntu/Ubuntu-Light.ttf");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Ubuntu";
+	src: url("./Ubuntu/Ubuntu-Regular.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Ubuntu";
+	src: url("./Ubuntu/Ubuntu-Medium.ttf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: "Ubuntu";
+	src: url("./Ubuntu/Ubuntu-Bold.ttf");
+	font-weight: 900;
+}

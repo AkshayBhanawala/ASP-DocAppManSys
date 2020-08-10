@@ -1,0 +1,512 @@
+﻿::-moz-selection { /* Code for Firefox */
+	color: #EFF2F8FF;
+	background: #474747FF;
+}
+
+::selection {
+	color: #EFF2F8FF;
+	background: #474747FF;
+}
+
+:root {
+	--Case_Height: calc(3vw + 5vh + 5vmin);
+	--Case_Height_Min: 120px;
+	--Case_Height_Max: 150px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+	*:focus {
+		outline: none;
+	}
+
+.div_contentpage {
+	animation-name: BlurOut;
+	animation-delay: 0s;
+	animation-duration: 0.3s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: ease;
+}
+
+	.div_contentpage.blur {
+		animation-name: BlurIn;
+		animation-delay: 0s;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+.div_Appointments {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	margin-right: 10px;
+	margin-bottom: 100px;
+	width: auto;
+	min-width: 1000px;
+}
+
+	.div_Appointments .div_Title {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		width: 60%;
+	}
+
+		.div_Appointments .div_Title > div:nth-child(1) {
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: auto;
+			padding-right: 100px;
+		}
+
+		.div_Appointments .div_Title > div:nth-child(2) {
+			flex-grow: 1;
+			flex-shrink: 0;
+			flex-basis: auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			flex-basis: auto;
+			justify-content: center;
+		}
+
+	.div_Appointments .div_AppointmentsList {
+		align-self: flex-start;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-width: 850px;
+	}
+
+.div_cases,
+.div_nocases {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-family: Nanum Gothic;
+	font-size: 18px;
+	width: 90%;
+	max-width: 1200px;
+}
+
+	.div_cases .div_case,
+	.div_nocases .div_nocase {
+		z-index: 2;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 5px;
+		overflow: hidden;
+		background-color: #F9F7F5;
+		border-radius: 5px;
+		box-shadow: 0px 1px 4px -2px #00000066;
+		transition: ease-out 0.2s;
+	}
+
+		.div_cases .div_case:hover {
+			z-index: 3;
+			box-shadow: 0px 15px 50px -15px #00000066;
+			transform: scale(1.02);
+			transition: ease-in 0.2s;
+		}
+
+		.div_cases .div_case .genderBG {
+			z-index: -1;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 20px;
+			opacity: 0.8;
+			-webkit-mask-size: contain;
+			-webkit-mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-repeat: no-repeat;
+		}
+
+		.div_cases .div_case[gender=Male] .genderBG {
+			height: 155%;
+			background: linear-gradient(to bottom right, #3EADCF, #ABE9CD);
+			-webkit-mask-image: url(../_Images/Gender_Male.svg);
+			mask-image: url(../_Images/Gender_Male.svg);
+		}
+
+		.div_cases .div_case[gender=Female] .genderBG {
+			height: 130%;
+			background: linear-gradient(to bottom right, #E58C8A, #EEC0C6);
+			-webkit-mask-image: url(../_Images/Gender_Female.svg);
+			mask-image: url(../_Images/Gender_Female.svg);
+		}
+
+		.div_cases .div_case[gender=Other] .genderBG {
+			height: 105%;
+			background: linear-gradient(to bottom right, #9E768F, #9FA4C4);
+			-webkit-mask-image: url(../_Images/Gender_Other.svg);
+			mask-image: url(../_Images/Gender_Other.svg);
+		}
+
+		.div_cases .div_case .col {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			height: 100%;
+		}
+
+		.div_cases .div_case > .col {
+			padding: 10px 20px;
+			height: var(--Case_Height);
+			min-height: var(--Case_Height_Min);
+			max-height: var(--Case_Height_Max);
+		}
+
+			.div_cases .div_case > .col:nth-child(1) {
+				width: 60%;
+			}
+
+		.div_cases .div_case .row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+
+		.div_cases .div_case .AppID {
+			user-select: none;
+		}
+
+		.div_cases .div_case .PID {
+		}
+
+		.div_cases .div_case .PName {
+			font-size: 25px;
+			font-weight: 600;
+		}
+
+		.div_cases .div_case .Gender {
+			user-select: none;
+		}
+
+		.div_cases .div_case .Age {
+			user-select: none;
+		}
+
+		.div_cases .div_case .Date {
+			user-select: none;
+		}
+
+		.div_cases .div_case .Time {
+			user-select: none;
+		}
+
+		.div_cases .div_case .DeleteButton {
+			position: relative;
+			min-width: 100px;
+			width: 10%;
+			height: var(--Case_Height);
+			min-height: var(--Case_Height_Min);
+			max-height: var(--Case_Height_Max);
+			padding: 0;
+		}
+
+			.div_cases .div_case .DeleteButton .btn {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				max-height: 100%;
+				max-width: 100%;
+				border-radius: 0;
+				color: #202020;
+			}
+
+				.div_cases .div_case .DeleteButton .btn:hover,
+				.div_cases .div_case .DeleteButton .btn:focus,
+				.div_cases .div_case .DeleteButton .btn:active {
+					box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.6);
+				}
+
+				.div_cases .div_case .DeleteButton .btn:active {
+					background: inherit;
+				}
+
+	.div_nocases .div_nocase {
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+	}
+
+		.div_nocases .div_nocase .NoCase {
+			font-size: 25px;
+			font-weight: 600;
+		}
+
+.div_Container {
+	z-index: 3;
+	display: block;
+	position: absolute;
+	/*background-color: #F7F7F755;*/
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	overflow: auto;
+}
+
+	.div_Container.hide {
+		animation-name: VisibilityOut;
+		animation-delay: 0s;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+	.div_Container.show {
+		animation-name: VisibilityIn;
+		animation-delay: 0s;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+	.div_Container .div_close {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		z-index: 4;
+		display: block;
+		position: fixed;
+		color: #202020FF;
+		font-size: 40px;
+		right: 30px;
+		margin: 0;
+		cursor: pointer;
+		transition: ease-in 0.2s;
+	}
+
+		.div_Container .div_close:hover {
+			color: #F7444EFF;
+			transition: ease-out 0.2s;
+		}
+
+.div_FormContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.div_AppointmentForm {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 70%;
+	height: 100%;
+	max-width: 1000px;
+	min-width: 700px;
+}
+
+	.div_AppointmentForm .row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: normal;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+		.div_AppointmentForm .row.divider {
+			display: block;
+			position: relative;
+			height: 1px;
+			background: linear-gradient(to bottom right, #2B92E4, #6Fc7E1);
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.div_AppointmentForm .row.header {
+			justify-content: center;
+		}
+
+			.div_AppointmentForm .row.header > div {
+				width: auto;
+				flex-shrink: 0;
+			}
+
+				.div_AppointmentForm .row.header > div > h1 {
+					width: 100%;
+					max-width: initial;
+					margin-bottom: 10px;
+				}
+
+		.div_AppointmentForm .row.tail {
+			justify-content: center;
+		}
+
+			.div_AppointmentForm .row.tail > div {
+				width: 30%;
+			}
+
+		.div_AppointmentForm .row > div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 90%;
+		}
+
+			.div_AppointmentForm .row > div > * {
+				width: 90%;
+				max-width: 90%;
+			}
+
+		.div_AppointmentForm .row > .hint {
+			position: relative;
+			display: block;
+		}
+
+			.div_AppointmentForm .row > .hint > .element {
+				cursor: help;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 30px;
+				height: 50px;
+				width: 50px;
+				color: #FFFFFFFF;
+				border-radius: 50%;
+				background: linear-gradient(to bottom right, #2B92E4, #6Fc7E1);
+				box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2);
+				transition-timing-function: ease-in;
+				transition-duration: 0.1s;
+			}
+
+				.div_AppointmentForm .row > .hint > .element:hover,
+				.div_AppointmentForm .row > .hint > .element:active,
+				.div_AppointmentForm .row > .hint > .element:focus {
+					box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.6);
+					transition-timing-function: ease-out;
+					transition-duration: 0.1s;
+				}
+
+					.div_AppointmentForm .row > .hint > .element:hover + .content,
+					.div_AppointmentForm .row > .hint > .element:active + .content,
+					.div_AppointmentForm .row > .hint > .element:focus + .content {
+						animation-name: ShowHint;
+						animation-delay: 0s;
+						animation-duration: 0.3s;
+						animation-iteration-count: 1;
+						animation-direction: normal;
+						animation-timing-function: ease;
+						animation-fill-mode: forwards;
+					}
+
+			.div_AppointmentForm .row > .hint > .content {
+				z-index: 99;
+				display: block;
+				position: absolute;
+				height: auto;
+				width: 100%;
+				font-family: Roboto;
+				left: -37.5%;
+				padding: 10px;
+				background-color: #FFFFFFFF;
+				overflow: hidden;
+				border-radius: 1%;
+				box-shadow: 0px 3px 30px -10px rgba(0,0,0,0.6);
+				transform-origin: center;
+				animation-name: HideHint;
+				animation-delay: 0.3s;
+				animation-duration: 0.3s;
+				animation-iteration-count: 1;
+				animation-direction: normal;
+				animation-timing-function: ease;
+				animation-fill-mode: forwards;
+			}
+
+				.div_AppointmentForm .row > .hint > .content:hover,
+				.div_AppointmentForm .row > .hint > .content:active,
+				.div_AppointmentForm .row > .hint > .content:focus {
+					animation-name: none;
+				}
+
+@keyframes ShowHint {
+	0% {
+		z-index: 99;
+		transform: translateY(-50%) scale(0);
+	}
+
+	30% {
+		transform: translateY(20%) scale(0.5);
+	}
+
+	100% {
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes HideHint {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+
+	30% {
+		transform: translateY(20%) scale(0.5);
+	}
+
+	100% {
+		transform: translateY(-50%) scale(0);
+	}
+}

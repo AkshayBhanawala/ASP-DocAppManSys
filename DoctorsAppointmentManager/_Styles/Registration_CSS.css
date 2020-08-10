@@ -1,0 +1,22 @@
+﻿@import url("./Fonts/Fonts.css");
+@import url("./TextColor_CSS.css");
+@import url("./Buttons_CSS.css");
+@import url("./RadioCheckbox_CSS.css");
+@import url("./TextBox_CSS.css");
+@import url("./Animations_CSS.css");
+@import url("./PageLoad_BeforeLogin_CSS.css");
+@import url("./PageUnload_BeforeLogin_CSS.css");
+@import url("./Login_CSS.css");
+
+.div_innercontainer {
+	min-height: 680px;
+	min-width: 850px;
+}
+
+.div_gender {
+	display: flex;
+	flex-grow: 1;
+	width: 80%;
+	justify-content: space-between;
+	align-items: flex-start;
+}

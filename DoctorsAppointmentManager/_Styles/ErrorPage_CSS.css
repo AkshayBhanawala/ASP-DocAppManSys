@@ -1,0 +1,137 @@
+﻿@import url("./Fonts/Fonts.css");
+@import url("./TextColor_CSS.css");
+
+::-moz-selection { /* Code for Firefox */
+  color: #EFF2F8FF;
+  background: #474747FF;
+}
+
+::selection {
+  color: #EFF2F8FF;
+  background: #474747FF;
+}
+
+:root {
+
+}
+
+* {
+	user-select: none;
+	box-sizing: border-box;
+}
+*:focus {
+	outline: none;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 10px;
+	min-width: 800px;
+	min-height: 500px;
+	height: 100%;
+	background-color: #F4F6F0;
+}
+
+.div_maincontainer {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.div_Error {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+	.div_Error .div_ErrorDetails {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100%;
+		margin: 10px;
+		font-family: "Nanum Gothic";
+		font-size: 20px;
+	}
+
+		.div_Error .div_ErrorDetails .oops {
+			font-family: "Dosis";
+			font-size: calc(5vw + 10vh + 5vmin);
+			font-weight: 900;
+		}
+
+		.div_Error .div_ErrorDetails .text {
+			margin-bottom: 30px;
+			line-height: 30px;
+			font-family: "Dosis";
+			font-size: 35px;
+		}
+
+		.div_Error .div_ErrorDetails .ErrorCode {
+			font-size: 24px;
+		}
+
+			.div_Error .div_ErrorDetails .ErrorCode .ErrorCodeValue {
+				color: #FF0000;
+			}
+
+		.div_Error .div_ErrorDetails .ErrorDetails {
+			display: none;
+		}
+
+			.div_Error .div_ErrorDetails .ErrorDetails .ErrorDetailsValue {
+				color: #FF0000;
+			}
+
+		.div_Error .div_ErrorDetails .div_HelpfulLinks {
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			margin-top: 30px;
+			font-family: "Nanum Gothic";
+			font-size: 20px;
+		}
+
+			.div_Error .div_ErrorDetails .div_HelpfulLinks a {
+				margin-left: 15px;
+				position: relative;
+				text-decoration: none;
+				color: #F7444E;
+			}
+				.div_Error .div_ErrorDetails .div_HelpfulLinks a:before {
+					display: inline-block;
+					position: relative;
+					top: 0;
+					left: -5px;
+					content: "⮈";
+					text-decoration: none;
+				}
+				.div_Error .div_ErrorDetails .div_HelpfulLinks a:hover {
+					color: #2B92E4;
+				}
+				.div_Error .div_ErrorDetails .div_HelpfulLinks a:active {
+					color: #FF0000;
+				}
+
+	.div_Error .div_ErrorImage {
+		height: 100%;
+		margin: 10px;
+	}
+
+		.div_Error .div_ErrorImage img {
+			height: 100%;
+		}

@@ -1,0 +1,21 @@
+﻿/* Page Load Splash Screen */
+body::before {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	content: "";
+	height: 0.1%;
+	width: 100%;
+	min-height: 2px;
+	top: 50%;
+	left: 0;
+	background: linear-gradient(to bottom left, #F8C291FF, #FF7235FF);
+	
+	animation-name: SplashScreen_LineInExpand;
+	animation-delay: 0s;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: ease;
+	animation-fill-mode: none;
+}

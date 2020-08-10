@@ -1,0 +1,9 @@
+﻿.text_red {
+	color: #F7444E;
+}
+
+.span_error {
+	position: absolute;
+	top: 0;
+	font-size: 20px;
+}

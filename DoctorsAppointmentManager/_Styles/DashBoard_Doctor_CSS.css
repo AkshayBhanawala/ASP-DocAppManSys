@@ -1,0 +1,92 @@
+﻿@import url("./Fonts/Fonts.css");
+@import url("./Buttons_CSS.css");
+@import url("./TextBox_CSS.css");
+@import url("./Animations_CSS.css");
+
+::-moz-selection { /* Code for Firefox */
+	color: #EFF2F8FF;
+	background: #474747FF;
+}
+
+::selection {
+	color: #EFF2F8FF;
+	background: #474747FF;
+}
+
+:root {
+}
+
+* {
+	box-sizing: border-box;
+}
+
+	*:focus {
+		outline: none;
+	}
+
+.div_container {
+	user-select: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 620px;
+	height: auto;
+}
+
+
+	.div_container .div_row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 100%;
+		height: auto;
+	}
+
+	.div_container .div_row .div_card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		min-width: 200px;
+		max-width: 500px;
+		height: 200px;
+		padding: 10px;
+		margin: 5px;
+		cursor: pointer;
+		background-color: #F9F7F5;
+		border-radius: 5px;
+		box-shadow: 0px 1px 4px -2px #00000066;
+		transition: ease-in;
+		transition-duration: 0.2s;
+	}
+
+		.div_container .div_row .div_card:hover {
+			box-shadow: 0px 20px 30px -15px #00000044;
+			transform: scale(1.1);
+			transition: ease-out;
+			transition-duration: 0.2s;
+		}
+
+		.div_container .div_row .div_card .div_row1 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 50px;
+			font-weight: 900;
+			font-family: Ubuntu;
+			background: linear-gradient(to bottom right, #2B92E4, #6FC7E1);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.div_container .div_row .div_card .div_row2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			text-align: center;
+			font-family: "Nanum Gothic";
+			font-weight: 900;
+		}

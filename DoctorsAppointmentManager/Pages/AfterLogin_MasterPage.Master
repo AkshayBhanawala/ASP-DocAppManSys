@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AfterLogin_MasterPage.Master.cs" Inherits="DoctorsAppointmentManager.Pages.AfterLogin_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta charset="UTF-8" />
+	<meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1' name='viewport' />
+	<link rel="icon" type="image/png" href="~/_Images/Logo.png" />
+	<link href="<%=ResolveClientUrl("~/_Styles/MasterPage_CSS.css")%>" rel="Stylesheet" />
+	<script src="<%=ResolveClientUrl("~/_Scripts/jquery-3.4.1.js")%>" type="text/javascript"></script>
+	<script src="<%=ResolveClientUrl("~/_Scripts/JS.js")%>" type="text/javascript"></script>
+
+	<script>
+		var ref = document.referrer;
+		$(document).ready(function () {
+			if (ref.indexOf('/Login/') == -1) {
+				$(".div_loadanimationcontainer").remove();
+				$(".firstload").each(function (index, value) {
+					//console.log(index, value);
+					$(value).removeClass('firstload');
+				});
+			}
+		});
+
+		function getClientID(asp_id) {
+			return $('[id$=' + asp_id + ']').attr('id');
+		}
+
+		function getPageUrl() {
+			var Protocol = '<%= Request.Url.Scheme %>' + "://";
+				var HostPort = '<%= Request.Url.Authority %>';
+				var AppRelativePath = '<%= Page.ResolveUrl(Page.AppRelativeVirtualPath)%>';
+			return Protocol + HostPort + AppRelativePath;
+		}
+
+		function removeRequired() {
+			$('[required]').removeAttr('required');
+			return true;
+		}
+	</script>
+
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+	<input runat="server" id="LogdInUserID" type="hidden" value="" />
+	<input runat="server" id="LogdInUserType" type="hidden" value="" />
+
+	<div class="div_loadanimationcontainer">
+		<div class="div_loadanimation div1"></div>
+		<div class="div_loadanimation div2"></div>
+		<div class="div_loadanimation div3"></div>
+	</div>
+	<div id="div_maincontainer" class="div_maincontainer firstload">
+		<form name="F1" runat="server" defaultbutton="BTN_Logout">
+			<asp:ScriptManager ID="SM1" runat="server"></asp:ScriptManager>
+			<div id="div_header" class="div_header">
+				<div id="div_col1" class="div_col1">
+					<div id="div_logocontainer" class="div_logocontainer">
+						<a href="~" runat="server">
+							<div id="div_logo" class="div_logo"></div>
+						</a>
+					</div>
+				</div>
+				<div id="div_col2" class="div_col2">
+					<div id="div_userdetailscontainer" class="div_userdetailscontainer">
+						<div id="div_photocontainer" class="div_photocontainer">
+							<asp:Image ID="I_photo" runat="server" ImageUrl="~/_Images/Doctor_Male.png" />
+						</div>
+						<div id="div_namecontainer" class="div_namecontainer">
+							<asp:Label ID="L_DisplayName" runat="server" Text="Dr. John Doe"></asp:Label>
+						</div>
+					</div>
+					<div id="div_logoutcontainer" class="div_logoutcontainer">
+						<asp:Button ID="BTN_Logout" runat="server" Text="Logout" UseSubmitBehavior="false" CssClass="btn btn_red" OnClick="BTN_Logout_Click" />
+					</div>
+				</div>
+			</div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			</asp:ContentPlaceHolder>
+		</form>
+	</div>
+</body>
+</html>
