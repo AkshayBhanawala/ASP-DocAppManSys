@@ -128,7 +128,7 @@
 							</div>
 							<div class="row">
 								<div class="col PName">
-									<a id="A_PHistoryLink" tabindex="-1" pagelink="/Doctor/PatientHistory/" href="#" target="_blank">
+									<a id="A_PHistoryLink" tabindex="-1" pagelink="<%=ResolveClientUrl("~/Doctor/PatientHistory/")%>" href="#" target="_blank">
 										<span id="L_PName">Patient Name</span>
 									</a>
 								</div>
