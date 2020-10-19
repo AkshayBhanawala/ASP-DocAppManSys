@@ -24,5 +24,4 @@ http://testingth3az.somee.com/Hospital
 |Doctor: |**Dr chintan**|**cd123** |
 |Receptionist: |**Binal**|**br123**|
 
-**Or those details which you used for registration**
 
