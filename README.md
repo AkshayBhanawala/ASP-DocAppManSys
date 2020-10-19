@@ -1,4 +1,4 @@
-# [Movie Ticket Book System [ASP]](http://testingth3az.somee.com/Hospital)
+# [Doctor's Appointment Management System [ASP]](http://testingth3az.somee.com/Hospital)
 An app developed in collage days for learning more about jQuery and CSS Animations.
 
 ---
